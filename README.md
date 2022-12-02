@@ -10,3 +10,9 @@
 ## About Laravel
 
 This project is a simple upload large file with laravel 
+
+## Installation
+- composer require pion/laravel-chunk-upload
+- php artisan vendor:publish --provider="Pion\Laravel\ChunkUpload\Providers\ChunkUploadServiceProvider"
+----
+- npm install resumablejs

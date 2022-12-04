@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\FullCalenderController;
 use App\Http\Controllers\UploadControlller;
 use Illuminate\Support\Facades\Route;
 
@@ -19,3 +20,8 @@ Route::get('/', function () {
 });
 
 Route::post('/upload', [UploadControlller::class,'uploadFile'])->name('files.upload');
+
+Route::controller(FullCalenderController::class)->group(function () {
+    Route::get('fullcalender', 'index');
+    Route::post('fullcalenderAjax', 'ajax');
+});
